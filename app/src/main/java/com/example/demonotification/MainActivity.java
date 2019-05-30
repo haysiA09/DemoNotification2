@@ -88,9 +88,10 @@ public class MainActivity extends AppCompatActivity {
                 NotificationCompat.BigTextStyle bigText = new
                         NotificationCompat.BigTextStyle();
                 bigText.setBigContentTitle("Big Text – Long Content");
-                bigText.bigText("This is one big text" +
-                        " - A quick brown fox jumps over a lazy brown dog " +
-                        "\nLorem ipsum dolor sit amet, sea eu quod des");
+//                bigText.bigText("This is one big text" +
+//                        " - A quick brown fox jumps over a lazy brown dog " +
+//                        "\nLorem ipsum dolor sit amet, sea eu quod des");
+                String msg="This is one big text"+"-A quick brown fox jumps over a lazy dog"+"\n Lores ipsum dolar sit amet, sea eu quod des";
                 bigText.setSummaryText("Reflection Journal?");
 
                 // Build notification
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.setContentText("Subject");
                 builder.setSmallIcon(android.R.drawable.btn_star_big_off);
                 builder.setContentIntent(pIntent);
-//              builder.setStyle(bigText);
+                builder.setStyle(new Notification.BigTextStyle().bigText(msg));
                 builder.setAutoCancel(true);
 
                 Notification n = builder.build();
